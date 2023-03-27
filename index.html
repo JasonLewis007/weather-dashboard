@@ -8,3 +8,37 @@
     <link rel="stylesheet" href='./style.css'>
     <title>Weather Dashboard</title>
 </head>
+<body>
+    <header class="heading">Weather Dashboard</header>
+
+    <main id='container' class="container">
+        <div class="row">
+            <div class="column1">
+                <div id='search-area'>
+                    <h1 class='h1'>Search for a City:</h1>
+
+                    <form id='search-city'>
+                        <input name='city' type="text" placeholder="Birmingham" id='city' autofocus='true' class='city-input' />
+                        <button type="submit" id='search-button' class='btn'>Search</button>
+                    </form>
+
+                    <hr>
+                    </hr>
+
+                    <div id="history"></div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <div id='five-forecast' class='row justify'></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src='./script.js'></script>
+
+</body>
