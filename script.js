@@ -10,6 +10,8 @@ var cityEl = $('#city');
 var fiveForecastEl = $('#five-forecast');
 var weatherIcon = 'http://openweathermap.org/img/wn/';
 var citySearch = [];
+
+
 // Fetch weather data from API url
 
 function fetchWeather(city) {
@@ -28,7 +30,7 @@ function fetchWeather(city) {
                                 weatherResult.json().then(function (weatherInfo) {
 
                                     // current day container
-                                    
+                             
                                     var weatherNow = $('<div></div>')
                                     .attr({ id: 'weather-now'})
                                     var current = weatherInfo.list[0];
@@ -56,8 +58,11 @@ function fetchWeather(city) {
                                     currentHeading.append(iconEL);
                                     weatherNow.append(weatherListCurrent);
                                     $('#five-forecast').before(weatherNow);
-                                    // Five day forecast
+
                                     
+
+                                    // Five day forecast
+                                
 
                                     var fiveForecastHeader = $('<h2></h2>')
                                         .text("5-Day-Forecast:")
